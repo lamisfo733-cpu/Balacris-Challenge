@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحدي بلاكرس للروبوتات - Lybotics Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-stage8.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="robot-icon">🤖</div>
+        <div class="robot-icon">⚙️</div>
+        <div class="robot-icon">🔧</div>
+        <div class="robot-icon">💚</div>
+    </div>
+
+    <!-- Login Screen -->
+    <div id="loginScreen" class="screen active">
+        <div class="container">
+            <div class="logo-section">
+                <div class="logo-circle">
+                    <span class="logo-text">LYBOTICS</span>
+                    <span class="team-number">#19361</span>
+                </div>
+                <h1>تحدي بلاكرس للروبوتات</h1>
+                <p class="subtitle">رحلة من 8 مراحل نحو الإبداع والابتكار 🚀</p>
+            </div>
+
+            <div class="info-box">
+                <h3>🎯 عن التحدي</h3>
+                <p>انضم إلى مغامرة تفاعلية مثيرة مكونة من 8 مراحل!</p>
+                <ul class="features-list">
+                    <li>🎮 ألغاز تفاعلية عن FTC والروبوتات</li>
+                    <li>💻 العب وبرمج في المرحلة الأخيرة!</li>
+                    <li>🏆 مرحلة جديدة كل أسبوع</li>
+                    <li>🎁 جوائز قيمة لأول 5 فائزين</li>
+                    <li>📊 لوحة متصدرين مباشرة</li>
+                    <li>⏰ من 1 ديسمبر حتى 22 يناير</li>
+                </ul>
+            </div>
+
+            <div class="login-card">
+                <h2>سجل دخولك الآن</h2>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label>الاسم الكامل</label>
+                        <input type="text" id="userName" required placeholder="أدخل اسمك الكامل">
+                    </div>
+                    <div class="input-group">
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" id="userEmail" required placeholder="example@email.com">
+                    </div>
+                    <div class="input-group">
+                        <label>رقم الهاتف (اختياري)</label>
+                        <input type="tel" id="userPhone" placeholder="+218 91 234 5678">
+                    </div>
+                    <button type="submit" class="btn-primary">ابدأ التحدي 🚀</button>
+                </form>
+            </div>
+
+            <div class="social-links">
+                <p>تابعونا على Instagram</p>
+                <a href="https://www.instagram.com/lybotics.balacris.team" target="_blank" class="social-btn">
+                    @lybotics.balacris.team
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Game Screen -->
+    <div id="gameScreen" class="screen">
+        <nav class="top-nav">
+            <div class="nav-left">
+                <span class="user-name">مرحباً، <span id="displayName"></span></span>
+                <button id="logoutBtn" class="btn-secondary">تسجيل خروج</button>
+            </div>
+            <div class="nav-right">
+                <span class="score">النقاط: <span id="userScore">0</span></span>
+            </div>
+        </nav>
+
+        <div class="container">
+            <!-- Stages Progress -->
+            <div class="stages-progress">
+                <h2>مراحل التحدي</h2>
+                <div class="stages-grid" id="stagesGrid">
+                    <!-- Stages will be dynamically loaded -->
+                </div>
+            </div>
+
+            <!-- Current Stage -->
+            <div id="stageContent" class="stage-content">
+                <div class="welcome-message">
+                    <h2>🎮 مرحباً بك في تحدي بلاكرس!</h2>
+                    <p>اختر مرحلة من الأعلى لتبدأ المغامرة</p>
+                    <div class="countdown-timer">
+                        <p>المرحلة القادمة تبدأ في:</p>
+                        <div id="countdown"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leaderboard Button -->
+            <button id="showLeaderboardBtn" class="btn-leaderboard">🏆 لوحة المتصدرين</button>
+        </div>
+    </div>
+
+    <!-- Leaderboard Modal -->
+    <div id="leaderboardModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>🏆 لوحة المتصدرين</h2>
+            <div id="leaderboardContent">
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>الترتيب</th>
+                            <th>الاسم</th>
+                            <th>المراحل المكتملة</th>
+                            <th>النقاط</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboardBody">
+                        <!-- Dynamic content -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel (Hidden) -->
+    <div id="adminPanel" class="admin-panel" style="display: none;">
+        <button id="showAdminBtn" class="btn-admin">👑 لوحة الإدارة</button>
+        <div id="adminModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>👑 لوحة تحكم المشرف</h2>
+                
+                <div class="admin-tabs">
+                    <button class="tab-btn active" data-tab="participants">المشاركون</button>
+                    <button class="tab-btn" data-tab="progress">التقدم</button>
+                    <button class="tab-btn" data-tab="settings">الإعدادات</button>
+                </div>
+
+                <div id="participants" class="tab-content active">
+                    <h3>قائمة المشاركين</h3>
+                    <div id="participantsList"></div>
+                </div>
+
+                <div id="progress" class="tab-content">
+                    <h3>تقدم المراحل</h3>
+                    <div id="progressStats"></div>
+                </div>
+
+                <div id="settings" class="tab-content">
+                    <h3>الإعدادات</h3>
+                    <button id="exportDataBtn" class="btn-primary">تصدير البيانات</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+        <div class="spinner"></div>
+        <p>جاري التحميل...</p>
+    </div>
+
+    <!-- Scripts - Load in correct order -->
+    <script type="module" src="firebase-config.js"></script>
+    <script src="gameData.js"></script>
+    <script src="stage8-interactive.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

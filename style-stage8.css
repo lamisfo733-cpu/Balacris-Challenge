@@ -1,0 +1,336 @@
+/* إضافات CSS للمرحلة الثامنة - الألغاز التفاعلية */
+
+/* ===== Secret Word Puzzle Styles ===== */
+.secret-word-puzzle {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.puzzle-instructions {
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.1), rgba(39, 174, 96, 0.1));
+    border: 2px solid var(--primary-green);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.puzzle-instructions h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.secret-words-display {
+    margin: 2rem 0;
+}
+
+.secret-words-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.secret-word-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.secret-word-card.completed {
+    border-color: var(--primary-green);
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.15), rgba(39, 174, 96, 0.1));
+}
+
+.secret-word-card.locked {
+    opacity: 0.5;
+}
+
+.secret-word-card .stage-number {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-bottom: 0.5rem;
+}
+
+.secret-word-card .secret-word {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent-yellow);
+    margin: 1rem 0;
+    letter-spacing: 2px;
+}
+
+.secret-word-card .first-letter {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+}
+
+.secret-word-card .first-letter strong {
+    color: var(--primary-green);
+    font-size: 1.5rem;
+}
+
+.secret-word-card .hint {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    font-style: italic;
+}
+
+/* ===== Code Game Styles ===== */
+.code-game-container {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.code-instructions {
+    background: linear-gradient(135deg, rgba(243, 156, 18, 0.1), rgba(230, 126, 34, 0.1));
+    border: 2px solid var(--accent-yellow);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.code-instructions h4 {
+    color: var(--accent-yellow);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.code-editor-section {
+    margin: 2rem 0;
+}
+
+.code-editor-section h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.code-editor {
+    width: 100%;
+    min-height: 400px;
+    padding: 1rem;
+    background: #1e1e1e;
+    color: #d4d4d4;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    resize: vertical;
+    direction: ltr;
+    text-align: left;
+}
+
+.code-editor:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.3);
+}
+
+.code-result {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.code-result.success {
+    background: rgba(46, 204, 113, 0.2);
+    border: 2px solid var(--primary-green);
+    color: var(--primary-green);
+}
+
+.code-result.error {
+    background: rgba(231, 76, 60, 0.2);
+    border: 2px solid var(--danger-red);
+    color: var(--danger-red);
+}
+
+.code-result code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+}
+
+/* ===== Game Canvas Styles ===== */
+.game-canvas-section {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.game-canvas-section h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.game-canvas-section canvas {
+    border: 3px solid var(--primary-green);
+    border-radius: 10px;
+    background: #87CEEB;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== Smart Puzzle Styles ===== */
+.smart-puzzle {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.puzzle-question {
+    background: linear-gradient(135deg, rgba(142, 68, 173, 0.1), rgba(155, 89, 182, 0.1));
+    border: 2px solid #9b59b6;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.puzzle-question h4 {
+    color: #9b59b6;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.answer-section {
+    margin-top: 2rem;
+}
+
+/* ===== Special Section Styles ===== */
+.secret-word-section,
+.code-game-section {
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.secret-word-section h3 {
+    color: var(--primary-green);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.code-game-section h3 {
+    color: var(--accent-yellow);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* ===== Animations for Stage 8 ===== */
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(46, 204, 113, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(46, 204, 113, 0.6); }
+}
+
+.secret-word-card.completed:hover {
+    animation: glow 2s infinite;
+    transform: translateY(-5px);
+}
+
+@keyframes codeHighlight {
+    0%, 100% { background: rgba(243, 156, 18, 0.1); }
+    50% { background: rgba(243, 156, 18, 0.2); }
+}
+
+.code-editor:focus {
+    animation: codeHighlight 2s infinite;
+}
+
+/* ===== Responsive Design for Stage 8 ===== */
+@media (max-width: 768px) {
+    .secret-words-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .code-editor {
+        min-height: 300px;
+        font-size: 0.75rem;
+    }
+    
+    .code-game-container,
+    .secret-word-puzzle,
+    .smart-puzzle {
+        padding: 1rem;
+    }
+    
+    .game-canvas-section canvas {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ===== Stage 8 Special Effects ===== */
+.stage-card[data-stage="8"] {
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.1), rgba(243, 156, 18, 0.1));
+    border: 2px solid var(--accent-yellow);
+}
+
+.stage-card[data-stage="8"]:hover {
+    box-shadow: 0 15px 50px rgba(243, 156, 18, 0.4);
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* ===== Loading Animation for Game ===== */
+.game-loading {
+    text-align: center;
+    padding: 3rem;
+}
+
+.game-loading::before {
+    content: "🎮";
+    font-size: 3rem;
+    display: block;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* ===== Success Message Animation ===== */
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.feedback-message.success {
+    animation: successPulse 0.5s ease;
+}
+
+/* ===== Stage 8 Icon Styles ===== */
+.stage-icon-interactive {
+    position: relative;
+    display: inline-block;
+}
+
+.stage-icon-interactive::after {
+    content: "✨";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 1.5rem;
+    animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0; transform: rotate(0deg) scale(0.5); }
+    50% { opacity: 1; transform: rotate(180deg) scale(1); }
+}
