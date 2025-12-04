@@ -1,0 +1,591 @@
+/* Special Games Styling for Stages 8, 9, and 10 */
+
+/* ============================================
+   STAGE 8: Password Puzzle Styles
+   ============================================ */
+
+.password-puzzle-container {
+    background: rgba(46, 204, 113, 0.1);
+    border: 2px solid var(--primary-green);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.puzzle-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.puzzle-header h3 {
+    color: var(--primary-green);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.hint {
+    color: var(--accent-yellow);
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.password-input-group {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.password-input-field {
+    flex: 1;
+    padding: 1.2rem;
+    border: 3px solid rgba(46, 204, 113, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-light);
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 3px;
+    transition: all 0.3s ease;
+}
+
+.password-input-field:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    background: rgba(46, 204, 113, 0.1);
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.4);
+}
+
+.submit-password-btn {
+    padding: 1.2rem 2rem;
+    background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.submit-password-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(46, 204, 113, 0.6);
+}
+
+/* ============================================
+   STAGE 9: Platform Game Styles
+   ============================================ */
+
+.game-container {
+    background: rgba(22, 33, 62, 0.9);
+    border: 3px solid var(--primary-green);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.game-container h3 {
+    color: var(--primary-green);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.game-canvas {
+    border: 3px solid var(--primary-green);
+    border-radius: 10px;
+    margin: 1rem auto;
+    display: block;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    background: #1a1a2e;
+}
+
+.game-controls {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: rgba(46, 204, 113, 0.1);
+    border-radius: 10px;
+}
+
+.game-controls p {
+    color: var(--text-gray);
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.start-game-btn {
+    padding: 1rem 3rem;
+    background: linear-gradient(135deg, var(--accent-yellow), #e67e22);
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1rem;
+}
+
+.start-game-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(243, 156, 18, 0.6);
+}
+
+/* Code Fix Challenge */
+.code-fix-container {
+    background: rgba(52, 152, 219, 0.1);
+    border: 2px solid #3498db;
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.code-fix-container h3 {
+    color: #3498db;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.code-display {
+    background: #1a1a2e;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+
+.code-display pre {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #2ecc71;
+}
+
+.code-display code {
+    color: #2ecc71;
+}
+
+.code-hint {
+    color: var(--accent-yellow);
+    font-size: 1rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.code-input-group {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.code-input-field {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid rgba(52, 152, 219, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-light);
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.code-input-field:focus {
+    outline: none;
+    border-color: #3498db;
+    background: rgba(52, 152, 219, 0.1);
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.4);
+}
+
+.submit-code-btn {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-code-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(52, 152, 219, 0.6);
+}
+
+/* ============================================
+   STAGE 10: Robot Lab Styles
+   ============================================ */
+
+.robot-lab-container {
+    background: linear-gradient(135deg, rgba(155, 89, 182, 0.1), rgba(142, 68, 173, 0.1));
+    border: 3px solid #9b59b6;
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.robot-lab-container h3 {
+    color: #9b59b6;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Component Selector */
+.components-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.component-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(155, 89, 182, 0.3);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.component-card:hover {
+    transform: translateY(-5px);
+    border-color: #9b59b6;
+    box-shadow: 0 10px 30px rgba(155, 89, 182, 0.4);
+}
+
+.component-card.selected {
+    background: rgba(155, 89, 182, 0.2);
+    border-color: #9b59b6;
+    border-width: 3px;
+}
+
+.component-icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.component-name {
+    font-weight: 700;
+    color: var(--text-light);
+    margin: 0.5rem 0;
+}
+
+.component-desc {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+}
+
+.selected-components {
+    background: rgba(155, 89, 182, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+}
+
+.selected-components h4 {
+    color: #9b59b6;
+    margin-bottom: 1rem;
+}
+
+.selected-tag {
+    display: inline-block;
+    background: rgba(155, 89, 182, 0.3);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.submit-design-btn {
+    width: 100%;
+    padding: 1.2rem;
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-design-btn:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(155, 89, 182, 0.6);
+}
+
+.submit-design-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Block Programming */
+.block-programming-container {
+    background: rgba(52, 152, 219, 0.1);
+    border: 3px solid #3498db;
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.block-programming-container h3 {
+    color: #3498db;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.blocks-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+}
+
+.programming-block {
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    cursor: move;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.programming-block:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.programming-workspace {
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 3px dashed rgba(52, 152, 219, 0.5);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.workspace-hint {
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 1.1rem;
+    padding: 2rem;
+}
+
+.workspace-block {
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.workspace-block:hover {
+    transform: translateX(-5px);
+}
+
+.remove-block {
+    background: rgba(231, 76, 60, 0.8);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.remove-block:hover {
+    background: #e74c3c;
+}
+
+.run-program-btn {
+    width: 100%;
+    padding: 1.2rem;
+    background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.run-program-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(46, 204, 113, 0.6);
+}
+
+/* Robot Simulation */
+.simulation-container {
+    background: rgba(241, 196, 15, 0.1);
+    border: 3px solid var(--accent-yellow);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.simulation-container h3 {
+    color: var(--accent-yellow);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#robotSimCanvas {
+    border: 3px solid var(--accent-yellow);
+    border-radius: 10px;
+    margin: 1rem auto;
+    display: block;
+    background: #16213e;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.simulation-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: rgba(241, 196, 15, 0.1);
+    border-radius: 10px;
+}
+
+.simulation-stats p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.simulation-stats span {
+    color: var(--accent-yellow);
+    font-size: 1.4rem;
+}
+
+.start-sim-btn {
+    padding: 1.2rem 3rem;
+    background: linear-gradient(135deg, var(--accent-yellow), #e67e22);
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1rem;
+}
+
+.start-sim-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(243, 156, 18, 0.6);
+}
+
+/* Responsive Design for Special Games */
+@media (max-width: 768px) {
+    .game-canvas {
+        width: 100%;
+        height: auto;
+    }
+    
+    #robotSimCanvas {
+        width: 100%;
+        height: auto;
+    }
+    
+    .components-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    
+    .blocks-palette {
+        grid-template-columns: 1fr;
+    }
+    
+    .password-input-group,
+    .code-input-group {
+        flex-direction: column;
+    }
+    
+    .submit-password-btn,
+    .submit-code-btn {
+        width: 100%;
+    }
+}
+
+/* Animation Effects */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(46, 204, 113, 1);
+    }
+}
+
+.component-card.selected {
+    animation: glow 2s infinite;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.workspace-block {
+    animation: slideInFromRight 0.3s ease;
+}
+
+/* Special Stage Indicators */
+.special-stage-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 0.5rem;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+}
+
+.interactive-badge {
+    background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+}
+
+.game-badge {
+    background: linear-gradient(135deg, var(--accent-yellow), #e67e22);
+}
+
+.lab-badge {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
